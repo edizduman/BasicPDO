@@ -10,5 +10,7 @@ include "BasicPDO.php";
 
 use DB\BasicPDO as DB;
 
-DB::select("Select * FRom");
+DB::select("users");
+$result = DB::run();
+var_dump($result);
 
