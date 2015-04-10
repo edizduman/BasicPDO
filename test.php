@@ -12,7 +12,8 @@
 
 
 
-/*	DB::insert("users");
+/*
+	DB::insert("users");
 	DB::setColumns(array('username'=>'aa','password'=>'aa'));
 	DB::run();
 
@@ -24,11 +25,12 @@
 	DB::update("users");
 	DB::setColumns(array("username"=>"ediz"));
 	DB::setWhere(array("id"=>"1"));
-	DB::run();*/
+	DB::run();
+*/
+
 
 	DB::delete("users");
-	DB::setWhere(array('id'=>3));
-	DB::run();
-
+	DB::setWhere(array('id'=>4));
+	DB::done();
 
 

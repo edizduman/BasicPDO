@@ -169,7 +169,16 @@
 			self::$sql = str_replace ('*',$from,self::$sql);
 		}
 
-
+		public static function done() {
+			if (self::$where != false) {
+				self::$sql .= self::$where;
+				$query = self::getConnection ()->prepare (self::$sql);
+				$query->execute (self::$whereValue);
+				return true;
+			} else {
+				return false;
+			}
+		}
 		public static function run ($single = false)
 		{
 			$value = array ();
