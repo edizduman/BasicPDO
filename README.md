@@ -1,3 +1,3 @@
 # BasicPDO
-Basic PDO Static Class
+Basic PDO Static Singleton Class
 Geliştirme Aşamasındadır
