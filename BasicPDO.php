@@ -66,8 +66,10 @@
 		 */
 		private static $limit = false;
 
-		private static $tableName;
-
+		/**
+		 * LIMIT'in tutulduğu değişken
+		 * @var
+		 */
 		public static $db = NULL;
 
 		/**
@@ -159,19 +161,34 @@
 			self::$where = substr (self::$where,0,-strlen ($_param));
 		}
 
-		public static function setLimit ($limit)
+		public static function setLimit ($_limit)
 		{
-			self::$limit = "LIMIT " . $limit;
+			self::$sql.= "LIMIT " . $_limit;
 		}
+
+		public static function setOrder ($_order)
+		{
+			self::$sql.= "ORDER BY " . $_order;
+		}
+
+		public static function setGroupBy ($_group)
+		{
+			self::$sql.= "GROUP BY " . $_group;
+		}
+
 
 		public static function setFrom ($from)
 		{
 			self::$sql = str_replace ('*',$from,self::$sql);
 		}
 
+
 		public static function done() {
 			if (self::$where != false) {
 				self::$sql .= self::$where;
+
+				if (self::s)
+
 				$query = self::getConnection ()->prepare (self::$sql);
 				$query->execute (self::$whereValue);
 				return true;
@@ -179,6 +196,7 @@
 				return false;
 			}
 		}
+
 		public static function run ($single = false)
 		{
 			$value = array ();
@@ -191,8 +209,6 @@
 				self::$sql .= self::$where;
 				$value = array_merge ($value,self::$whereValue);
 			}
-
-			echo self::$sql;
 
 			$query = self::getConnection ()->prepare (self::$sql);
 			$query->execute ($value);
