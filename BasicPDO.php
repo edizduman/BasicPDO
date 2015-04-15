@@ -12,7 +12,7 @@
 	namespace DB;
 
 	use PDO;
-	use Config;
+	use Config\Config as Config;
 
 
 	class BasicPDO
@@ -98,6 +98,7 @@
 		private static function init ()
 		{
 			try {
+
 				$dsn      = 'mysql:host=' . Config::get('database/host'). ';dbname=' . Config::get('database/db');
 				self::$db = new PDO($dsn,Config::get('database/username'),Config::get('database/password'));
 				self::$db->setAttribute (PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -174,7 +175,9 @@
 			self::$sql = str_replace ('*',$from,self::$sql);
 		}
 
-
+		/*
+		 * Delete İşlemi final fonksiyonu
+		 */
 		public static function done() {
 			if (self::$where != false) {
 				self::$sql .= self::$where;
@@ -189,6 +192,9 @@
 			}
 		}
 
+		/*
+		 * Insert/Update/Select İşlemleri final fonksiyonu
+		 */
 		public static function run ($single = false)
 		{
 			$value = array ();
@@ -200,20 +206,19 @@
 			if (self::$where != false) {
 				self::$sql .= self::$where;
 				$value = array_merge ($value,self::$whereValue);
+				self::$where = false;
 			}
 
 			$query = self::getConnection ()->prepare (self::$sql);
 			$query->execute ($value);
-			if (self::$columns == false) {
-				self::$where = false;
+			if (self::$columns == false) { //columns değişkenine bir veri set edimediyse  select  işlemidir. dönüş fetch olmalıdır
 				if ($single) {
-					return $query->fetch ();
+					return $query->fetch (PDO::FETCH_ASSOC);
 				} else {
-					return $query->fetchAll ();
+					return $query->fetchAll (PDO::FETCH_ASSOC);
 				}
 			} else {
 				self::$columns = false;
-				self::$where   = false;
 				return $query;
 			}
 		}
