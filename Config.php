@@ -1,7 +1,7 @@
 <?php
 
 	/**
-	 * Sistemin Konfigirasyon Bilgileri config.inc.php den okunup bu sýnýfa gönderilir. Tüm Conf Sistemi bu static sýnýf üzerinde yönetilir.
+	 * Sistemin Konfigirasyon Bilgileri config.inc.php den okunup bu sÄ±nÄ±fa gÃ¶nderilir. TÃ¼m Conf Sistemi bu static sÄ±nÄ±f Ã¼zerinde yÃ¶netilir.
 	 * @useful $config::get('db/host')
 	 * @TODO Singleton eklenecek
 	 */
@@ -12,12 +12,10 @@
 	{
 
 		private static $configData;
-
 		public static function readConfig ()
 		{
 			$configFile ="config.ini";
 			self::$configData = parse_ini_file($configFile,true);
-
 		}
 
 

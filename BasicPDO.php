@@ -59,19 +59,17 @@
 		private static $limit = false;
 
 		/**
-		 * LIMIT'in tutulduğu değişken
+		 * ORDER'in tutulduğu değişken
+		 * @var
+		 */
+		private static $order = false;
+
+		/**
+		 * DB bağlantısının tutulduğu değişken
 		 * @var
 		 */
 		public static $db = NULL;
 
-		/**
-		 * Sınıf içerisinde tanımlı olamayan ve
-		 * çağrılan tüm fonksiyonları PDO içersinden çağırır
-		 */
-		public static function __callStatic ($func,$args)
-		{
-			return call_user_func_array (array (self::getConnettion (),$func),$args);
-		}
 
 
 		/**
@@ -156,17 +154,18 @@
 
 		public static function setLimit ($_limit)
 		{
-			self::$sql.= "LIMIT " . $_limit;
+			self::$limit.= " LIMIT " . $_limit;
 		}
 
-		public static function setOrder ($_order)
+		public static function setOrder ($_field,$_order="ASC")
 		{
-			self::$sql.= "ORDER BY " . $_order;
+			self::$order.= " ORDER BY ". $_field." ".$_order;
+
 		}
 
 		public static function setGroupBy ($_group)
 		{
-			self::$sql.= "GROUP BY " . $_group;
+			self::$group.= " GROUP BY " . $_group;
 		}
 
 
@@ -181,8 +180,6 @@
 		public static function done() {
 			if (self::$where != false) {
 				self::$sql .= self::$where;
-
-				if (self::s)
 
 				$query = self::getConnection ()->prepare (self::$sql);
 				$query->execute (self::$whereValue);
@@ -208,9 +205,25 @@
 				$value = array_merge ($value,self::$whereValue);
 				self::$where = false;
 			}
+			if (self::$group != false) {
+				self::$sql .= self::$group;
+				self::$group = false;
+			}
 
+			if (self::$order != false) {
+				self::$sql .= self::$order;
+				self::$order = false;
+			}
+
+			if (self::$limit != false) {
+				self::$sql .= self::$limit;
+				self::$limit = false;
+			}
+
+			echo self::$sql;
 			$query = self::getConnection ()->prepare (self::$sql);
 			$query->execute ($value);
+
 			if (self::$columns == false) { //columns değişkenine bir veri set edimediyse  select  işlemidir. dönüş fetch olmalıdır
 				if ($single) {
 					return $query->fetch (PDO::FETCH_ASSOC);
@@ -222,6 +235,16 @@
 				return $query;
 			}
 		}
+
+		/**
+		 * Sınıf içerisinde tanımlı olamayan ve
+		 * çağrılan tüm fonksiyonları PDO içersinden çağırır
+		 */
+		public static function __callStatic ($func,$args)
+		{
+			return call_user_func_array (array (self::getConnection(),$func),$args);
+		}
+
 
 
 	}
