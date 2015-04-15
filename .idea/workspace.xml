@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1b7f96-f452-44ff-8219-62b02ee29b5a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BasicPDO.php" afterPath="$PROJECT_DIR$/BasicPDO.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BasicPDO.iws" />
@@ -27,17 +28,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BasicPDO.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BasicPDO.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BasicPDO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.23077" vertical-offset="1020" max-vertical-offset="3723">
-              <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.96196866" vertical-offset="2778" max-vertical-offset="3740">
+              <caret line="222" column="4" selection-start-line="222" selection-start-column="4" selection-end-line="222" selection-end-column="4" />
               <folding>
                 <element signature="e#181#189#0#PHP" expanded="true" />
-                <marker date="1429096481432" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
-                <marker date="1429096481432" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
-                <marker date="1429096481432" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
-                <marker date="1429096481432" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
+                <marker date="1429096737445" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
+                <marker date="1429096737445" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
+                <marker date="1429096737445" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
+                <marker date="1429096737445" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
               </folding>
             </state>
           </provider>
@@ -53,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.ini" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.ini" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.110869564" vertical-offset="0" max-vertical-offset="920">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
               <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
@@ -89,9 +90,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/Config.php" />
-        <option value="$PROJECT_DIR$/BasicPDO.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/config.ini" />
+        <option value="$PROJECT_DIR$/BasicPDO.php" />
       </list>
     </option>
   </component>
@@ -207,7 +208,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429096633006</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="BasicPDO ya Config  eklendi.">
+      <created>1429096686358</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1429096686358</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -254,7 +261,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="ofisten" />
-    <option name="LAST_COMMIT_MESSAGE" value="ofisten" />
+    <MESSAGE value="BasicPDO ya Config  eklendi." />
+    <option name="LAST_COMMIT_MESSAGE" value="BasicPDO ya Config  eklendi." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -269,10 +277,10 @@
           <caret line="78" column="43" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="43" />
           <folding>
             <element signature="e#181#189#0#PHP" expanded="true" />
-            <marker date="1429096481432" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
-            <marker date="1429096481432" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
-            <marker date="1429096481432" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
-            <marker date="1429096481432" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
+            <marker date="1429096737445" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
+            <marker date="1429096737445" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
+            <marker date="1429096737445" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
+            <marker date="1429096737445" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
           </folding>
         </state>
       </provider>
@@ -309,10 +317,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#181#189#0#PHP" expanded="true" />
-            <marker date="1429096481432" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
-            <marker date="1429096481432" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
-            <marker date="1429096481432" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
-            <marker date="1429096481432" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
+            <marker date="1429096737445" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
+            <marker date="1429096737445" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
+            <marker date="1429096737445" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
+            <marker date="1429096737445" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
           </folding>
         </state>
       </provider>
@@ -333,10 +341,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#181#189#0#PHP" expanded="true" />
-            <marker date="1429096481432" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
-            <marker date="1429096481432" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
-            <marker date="1429096481432" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
-            <marker date="1429096481432" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
+            <marker date="1429096737445" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
+            <marker date="1429096737445" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
+            <marker date="1429096737445" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
+            <marker date="1429096737445" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
           </folding>
         </state>
       </provider>
@@ -365,10 +373,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#181#189#0#PHP" expanded="true" />
-            <marker date="1429096481432" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
-            <marker date="1429096481432" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
-            <marker date="1429096481432" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
-            <marker date="1429096481432" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
+            <marker date="1429096737445" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
+            <marker date="1429096737445" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
+            <marker date="1429096737445" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
+            <marker date="1429096737445" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
           </folding>
         </state>
       </provider>
@@ -399,28 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BasicPDO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.23077" vertical-offset="1020" max-vertical-offset="3723">
-          <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
-          <folding>
-            <element signature="e#181#189#0#PHP" expanded="true" />
-            <marker date="1429096481432" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
-            <marker date="1429096481432" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
-            <marker date="1429096481432" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
-            <marker date="1429096481432" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="867">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="680">
@@ -433,9 +419,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.110869564" vertical-offset="0" max-vertical-offset="920">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="867">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicPDO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96196866" vertical-offset="2778" max-vertical-offset="3740">
+          <caret line="222" column="4" selection-start-line="222" selection-start-column="4" selection-end-line="222" selection-end-column="4" />
+          <folding>
+            <element signature="e#181#189#0#PHP" expanded="true" />
+            <marker date="1429096737445" expanded="true" signature="2152:2166" placeholder="SELECT * FRO..." />
+            <marker date="1429096737445" expanded="true" signature="2255:2268" placeholder="INSERT INTO ..." />
+            <marker date="1429096737445" expanded="true" signature="2255:2283" placeholder="INSERT INTO ..." />
+            <marker date="1429096737445" expanded="true" signature="2453:2465" placeholder="DELETE from ..." />
+          </folding>
         </state>
       </provider>
     </entry>
