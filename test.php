@@ -27,6 +27,7 @@
 	var_dump($s);
 
 
+
 	/*DB::update("users");
 	DB::setColumns(array("username"=>"ediz"));
 	DB::setWhere(array("id"=>"1"));

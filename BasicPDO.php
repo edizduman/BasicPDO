@@ -189,6 +189,7 @@
 			}
 		}
 
+
 		/*
 		 * Insert/Update/Select İşlemleri final fonksiyonu
 		 */
