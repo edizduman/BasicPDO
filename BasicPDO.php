@@ -12,19 +12,11 @@
 	namespace DB;
 
 	use PDO;
+	use Config;
 
 
 	class BasicPDO
 	{
-
-		/*** mysql hostname ***/
-		private static $hostname = 'localhost'; // Put your host name here
-		/*** mysql username ***/
-		private static $username = 'root'; // Put your MySQL User name here
-		/*** mysql password ***/
-		private static $password = ''; // Put Your MySQL Password here
-		/*** mysql password ***/
-		private static $dbName = 'kys'; // Put Your MySQL Database name here
 
 
 		/**
@@ -106,8 +98,8 @@
 		private static function init ()
 		{
 			try {
-				$dsn      = 'mysql:host=' . static::$hostname . ';dbname=' . static::$dbName;
-				self::$db = new PDO($dsn,static::$username,static::$password);
+				$dsn      = 'mysql:host=' . Config::get('database/host'). ';dbname=' . Config::get('database/db');
+				self::$db = new PDO($dsn,Config::get('database/username'),Config::get('database/password'));
 				self::$db->setAttribute (PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 				self::$db->exec ('SET CHARACTER SET utf8');
 				return self::$db;

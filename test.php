@@ -11,9 +11,6 @@
 
 	use DB\BasicPDO as DB;
 
-
-
-/*
 	DB::insert("users");
 	DB::setColumns(array('username'=>'aa','password'=>'aa'));
 	DB::run();
@@ -26,22 +23,12 @@
 	DB::update("users");
 	DB::setColumns(array("username"=>"ediz"));
 	DB::setWhere(array("id"=>"1"));
-	DB::run();+
-*/
-
-	Config::readConfig();
-	echo Config::get('global/firmaId');
-	echo "<br>";
-	echo Config::get('companyId');
-	echo "<br>";
-	echo Config::get('companyAdi');
-	echo "<br>";
-	echo Config::get('database/host');
-	echo "<br>";
+	DB::run();
 
 
-	/*DB::delete("users");
+
+	DB::delete("users");
 	DB::setWhere(array('id'=>4));
-	DB::done();*/
+	DB::done();
 
 
