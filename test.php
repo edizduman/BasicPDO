@@ -16,15 +16,26 @@
 	DB::setColumns(array('username'=>'aa','password'=>'aa'));
 	DB::run(); */
 
-	DB::select ('departments');
-	DB::setFrom('department');
-	DB::setWhere(array('department' => 'İdari İşler'));
-	DB::setOrder('department');
-	DB::setLimit('0,2');
+	//DB::select ('departments');
+	//DB::setFrom('department');
+	//DB::setWhere(array('department' => 'İdari İşler'));
+	//DB::setOrder('department');
+	//DB::setLimit('0,2');
 
-	$s = DB::run (false);
+	$single=DB::getConnection()->query("select * from users where id='1'")->fetch();
+	var_dump($single);
 
-	var_dump($s);
+
+	$multiresult = DB::getConnection()->query("select * from users")->fetchAll();
+	var_dump($multiresult);
+
+	$bing = DB::getConnection()->prepare("select * from users where id = :id");
+
+	$bing->bindValue(':id', '1', PDO::PARAM_STR);
+
+	var_dump($bing->query()->fetchAll());
+	//$s = DB::run (false);
+	//var_dump($s);
 
 
 
