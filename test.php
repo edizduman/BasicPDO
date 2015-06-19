@@ -30,10 +30,9 @@
 	var_dump($multiresult);
 
 	$bing = DB::getConnection()->prepare("select * from users where id = :id");
+    $bing->execute(array(':id'=> '1'));
 
-	$bing->bindValue(':id', '1', PDO::PARAM_STR);
-
-	var_dump($bing->query()->fetchAll());
+	var_dump($bing->fetchAll());
 	//$s = DB::run (false);
 	//var_dump($s);
 

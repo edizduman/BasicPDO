@@ -58,6 +58,12 @@
 		 */
 		private static $limit = false;
 
+        /**
+         * GROUP'in tutulduğu değişken
+         * @var
+         */
+        private static $group = false;
+
 		/**
 		 * ORDER'in tutulduğu değişken
 		 * @var
