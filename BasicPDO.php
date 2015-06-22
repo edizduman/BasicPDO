@@ -25,6 +25,12 @@
 		 */
 		private static $sql;
 
+        /**
+         * JOIN sqlinin tutulduğu değişken
+         * @var
+         */
+        private static $join = array();
+
 		/**
 		 * WHERE'in tutulduğu değişken
 		 * @var
@@ -146,6 +152,10 @@
 			self::$columns = substr (self::$columns,0,-strlen ($_param));
 		}
 
+        public static function join($_target_table,$_target_field,$_source_field,$_type = "LEFT") {
+            self::$sql .= " ".$_type." JOIN ".$_target_table." ON ".$_target_field."=".$_source_field ;
+        }
+
 
 		public static function setWhere ($_where,$_param = 'and')
 		{
@@ -207,7 +217,13 @@
 				$value = self::$columnsValue;
 			}
 
-			if (self::$where != false) {
+            if (self::$join != false) {
+                self::$sql .= implode(' ', self::$join);
+                unset(self::$join);
+            }
+
+
+            if (self::$where != false) {
 				self::$sql .= self::$where;
 				$value = array_merge ($value,self::$whereValue);
 				self::$where = false;
