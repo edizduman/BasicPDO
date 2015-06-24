@@ -13,7 +13,7 @@ use DB\BasicPDO as DB;
 
 DB::select ('users');
 DB::setFrom('username');
-DB::join('members','members.id','users.member_id','left');
+DB::setJoin('members','members.id','users.member_id','left');
 DB::setWhere(array('id' => 1));
 DB::setOrder('id');
 DB::setLimit('0,2');
