@@ -2,7 +2,7 @@
 /**
  * Created by PhpStorm.
  * User: edizduman
- * Date: 26.6.2015
+ * Date: 19.6.2015
  * Time: 16:48
  */
 
@@ -13,5 +13,5 @@ include "BasicPDO.php";
 use DB\BasicPDO as DB;
 
 DB::delete("users");
-DB::setWhere(array('id'=>4));
+DB::setWhere(array('id'=>1));
 DB::done();
