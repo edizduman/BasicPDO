@@ -11,6 +11,10 @@ include "BasicPDO.php";
 \Config\Config::readConfig();
 use DB\BasicPDO as DB;
 
+
+/**
+ * Sınıfa ait fonksiyonlar ile kullanım
+ */
 DB::select ('users');
 DB::setFrom('username');
 DB::setJoin('members','members.id','users.member_id','left');
@@ -19,3 +23,9 @@ DB::setOrder('id');
 DB::setLimit('0,2');
 $result = DB::run (false);
 var_dump($result);
+
+/**
+ * Sınıf üzerinden PDO fonksyionları ile kullanım
+ */
+$bing = DB::getConnection()->prepare("select * from users where id = :id");
+$bing->execute(array(':id'=> '1'));
