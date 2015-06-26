@@ -18,6 +18,20 @@ use Config\Config as Config;
 class BasicPDO
 {
 
+    /**
+     * Hatalı Kullanım ile sınıfın birden fazla türetilmemesi için _contruct _clone ve _ wakeup fonskyionları private etmemiz gerekiyor.
+     * Sadece BasicPDO Sınıfı içerisinde kullanılabilir.
+     */
+
+    private function __construct() {
+
+    }
+    private function __clone() {
+
+    }
+    private function __wakeup() {
+
+    }
 
     /**
      * SQL'in tutulduğu değişken
