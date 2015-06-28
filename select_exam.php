@@ -25,7 +25,18 @@ $result = DB::run (false);
 var_dump($result);
 
 /**
- * Sınıf üzerinden PDO fonksyionları ile kullanım
+ * Sınıf üzerinden PDO prepare ile kullanım
  */
 $bing = DB::getConnection()->prepare("select * from users where id = :id");
 $bing->execute(array(':id'=> '1'));
+
+
+/**
+ * Sınıf üzerinden PDO query ile kullanımlar
+ */
+
+$single=DB::getConnection()->query("select * from users where id='1'")->fetch();
+var_dump($single);
+
+$multi = DB::getConnection()->query("select * from users")->fetchAll();
+var_dump($multi);
