@@ -1,3 +1,3 @@
 # BasicPDO
-Basic PDO Static Singleton Class
-Geliştirme Aşamasındadır
+Basic PDO Singleton Class
+@TODO Call Back işlemleri
